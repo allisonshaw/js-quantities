@@ -299,10 +299,10 @@ SOFTWARE.
     "<celsius>" : [["degC","celsius","celsius","centigrade"], 1.0, "temperature", ["<kelvin>"]],
     "<fahrenheit>" : [["degF","fahrenheit"], 5 / 9, "temperature", ["<kelvin>"]],
     "<rankine>" : [["degR","rankine"], 5 / 9, "temperature", ["<kelvin>"]],
-    "<temp-K>"  : [["tempK","temp-K"], 1.0, "temperature", ["<temp-K>"]],
-    "<temp-C>"  : [["tempC","temp-C"], 1.0, "temperature", ["<temp-K>"]],
-    "<temp-F>"  : [["tempF","temp-F"], 5 / 9, "temperature", ["<temp-K>"]],
-    "<temp-R>"  : [["tempR","temp-R"], 5 / 9, "temperature", ["<temp-K>"]],
+    "<temp-K>"  : [["K","tempK","temp-K"], 1.0, "temperature", ["<temp-K>"]],
+    "<temp-C>"  : [["°C","tempC","temp-C"], 1.0, "temperature", ["<temp-K>"]],
+    "<temp-F>"  : [["°F","tempF","temp-F"], 5 / 9, "temperature", ["<temp-K>"]],
+    "<temp-R>"  : [["°R","tempR","temp-R"], 5 / 9, "temperature", ["<temp-K>"]],
 
     /* time */
     "<second>":  [["s","sec","secs","second","seconds"], 1.0, "time", ["<second>"]],

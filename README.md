@@ -2,6 +2,12 @@
 
 [![Build Status](https://travis-ci.org/gentooboontoo/js-quantities.png)](https://travis-ci.org/gentooboontoo/js-quantities)
 
+***
+This is a fork of [js-quantities](https://github.com/gentooboontoo/js-quantities) with temperature units (K, °C, °F, °R) aliased.
+
+New aliases map to temperature NOT differential temperature.
+***
+
 JS-quantities is originally a JavaScript port of Kevin Olbrich's library Ruby
 Units (http://github.com/olbrich/ruby-units).
 
@@ -309,6 +315,8 @@ measured in).
 Temperature units (i.e., 'tempK') can be converted back and forth, and will take
 into account the differences in the zero points of the various scales.
 Differential temperature (e.g., '100 degC') units behave like most other units.
+
+Temperatures aliased with the actual degree symbols (K, °C, °F, °R) are temperature units and NOT differential units.
 
 ```javascript
 Qty('37 tempC').to('tempF') // => 98.6 tempF
