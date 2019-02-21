@@ -35,16 +35,16 @@ export function addTempDegrees(temp,deg) {
 }
 
 function getDegreeUnits(units) {
-  if (units === "tempK") {
+  if (units === "K") {
     return "degK";
   }
-  else if (units === "tempC") {
+  else if (units === "°C") {
     return "degC";
   }
-  else if (units === "tempF") {
+  else if (units === "°F") {
     return "degF";
   }
-  else if (units === "tempR") {
+  else if (units === "°R") {
     return "degR";
   }
   else {
@@ -82,16 +82,16 @@ function toDegK(qty) {
   if (units.match(/(deg)[CFRK]/)) {
     q = qty.baseScalar;
   }
-  else if (units === "tempK") {
+  else if (units === "K") {
     q = qty.scalar;
   }
-  else if (units === "tempC") {
+  else if (units === "°C") {
     q = qty.scalar;
   }
-  else if (units === "tempF") {
+  else if (units === "°F") {
     q = qty.scalar * 5 / 9;
   }
-  else if (units === "tempR") {
+  else if (units === "°R") {
     q = qty.scalar * 5 / 9;
   }
   else {
@@ -105,16 +105,16 @@ export function toTemp(src,dst) {
   var dstUnits = dst.units();
   var dstScalar;
 
-  if (dstUnits === "tempK") {
+  if (dstUnits === "K") {
     dstScalar = src.baseScalar;
   }
-  else if (dstUnits === "tempC") {
+  else if (dstUnits === "°C") {
     dstScalar = src.baseScalar - 273.15;
   }
-  else if (dstUnits === "tempF") {
+  else if (dstUnits === "°F") {
     dstScalar = (src.baseScalar * 9 / 5) - 459.67;
   }
-  else if (dstUnits === "tempR") {
+  else if (dstUnits === "°R") {
     dstScalar = src.baseScalar * 9 / 5;
   }
   else {
@@ -130,16 +130,16 @@ export function toTempK(qty) {
   if (units.match(/(deg)[CFRK]/)) {
     q = qty.baseScalar;
   }
-  else if (units === "tempK") {
+  else if (units === "K") {
     q = qty.scalar;
   }
-  else if (units === "tempC") {
+  else if (units === "°C") {
     q = qty.scalar + 273.15;
   }
-  else if (units === "tempF") {
+  else if (units === "°F") {
     q = (qty.scalar + 459.67) * 5 / 9;
   }
-  else if (units === "tempR") {
+  else if (units === "°R") {
     q = qty.scalar * 5 / 9;
   }
   else {

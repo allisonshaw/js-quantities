@@ -1,13 +1,13 @@
 {
-  "name": "js-quantities",
+  "name": "@allisonshaw/js-quantities",
   "main": "./build/quantities.js",
   "readmeFilename": "README.md",
   "description": "JavaScript library for quantity calculation and unit conversion",
   "version": "1.7.3",
-  "homepage": "http://gentooboontoo.github.io/js-quantities/",
+  "homepage": "https://github.com/allisonshaw/js-quantities",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gentooboontoo/js-quantities.git"
+    "url": "https://github.com/allisonshaw/js-quantities.git"
   },
   "keywords": [
     "conversion",
@@ -25,17 +25,19 @@
     "unit",
     "units"
   ],
-  "author": "Julien Sanchez <julien.sanchez@gmail.com>",
+  "author": "Allison Shaw",
   "contributors": [
     "Julien Sanchez <julien.sanchez@gmail.com>",
-    "Rage Shadowman <ralph@crc-corp.com>"
+    "Rage Shadowman <ralph@crc-corp.com>",
+    "Allison Shaw"
   ],
   "license": "MIT",
   "scripts": {
-    "test": "jasmine-node spec/"
+    "test": "jasmine-node spec/",
+    "build:esm": "find src -iname *.js | rollup --file=build/quantities.esm.js --format=es --name=Qty src/quantities.js"
   },
   "bugs": {
-    "url": "https://github.com/gentooboontoo/js-quantities/issues"
+    "url": "https://github.com/allisonshaw/js-quantities/issues"
   },
   "devDependencies": {
     "jasmine-node": "1.x",

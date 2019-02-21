@@ -44,19 +44,19 @@ describe("js-quantities", function() {
     it("temperatures should have base unit in kelvin", function() {
       var qty = Qty("1 tempK").toBase();
       expect(qty.scalar).toBe(1);
-      expect(qty.units()).toBe("tempK");
+      expect(qty.units()).toBe("K");
 
       qty = Qty("1 tempR").toBase();
       expect(qty.scalar).toBe(5 / 9);
-      expect(qty.units()).toBe("tempK");
+      expect(qty.units()).toBe("K");
 
       qty = Qty("0 tempC").toBase();
       expect(qty.scalar).toBe(273.15);
-      expect(qty.units()).toBe("tempK");
+      expect(qty.units()).toBe("K");
 
       qty = Qty("0 tempF").toBase();
       expect(qty.scalar).toBeCloseTo(255.372, 3);
-      expect(qty.units()).toBe("tempK");
+      expect(qty.units()).toBe("K");
     });
 
     it("temperature degrees should have base unit in kelvin", function() {
@@ -925,16 +925,16 @@ describe("js-quantities", function() {
       var qty = Qty("2degC");
       var result = qty.add("3tempF");
       expect(result.scalar).toBe(33 / 5);
-      expect(result.units()).toBe("tempF");
+      expect(result.units()).toBe("°F");
 
       result = qty.add("-1tempC");
       expect(result.scalar).toBe(1);
-      expect(result.units()).toBe("tempC");
+      expect(result.units()).toBe("°C");
 
       qty = Qty("2 tempC");
       result = qty.add("2 degF");
       expect(result.scalar).toBe(28 / 9);
-      expect(result.units()).toBe("tempC");
+      expect(result.units()).toBe("°C");
     });
 
     it("should subtract degrees from degrees", function() {
@@ -958,7 +958,7 @@ describe("js-quantities", function() {
 
       var result = qty.sub("degC");
       expect(result.scalar).toBe(1);
-      expect(result.units()).toBe("tempC");
+      expect(result.units()).toBe("°C");
     });
 
     it("should subtract temperatures from temperatures", function() {
@@ -1023,11 +1023,11 @@ describe("js-quantities", function() {
 
       var result = qty.mul(2);
       expect(result.scalar).toBe(4);
-      expect(result.units()).toBe("tempF");
+      expect(result.units()).toBe("°F");
 
       result = Qty("2").mul(qty);
       expect(result.scalar).toBe(4);
-      expect(result.units()).toBe("tempF");
+      expect(result.units()).toBe("°F");
     });
 
     it("should multiply temperature degrees with unlike quantities", function() {
@@ -1106,7 +1106,7 @@ describe("js-quantities", function() {
 
       var result = Qty("4 tempF").div(2);
       expect(result.scalar).toBe(2);
-      expect(result.units()).toBe("tempF");
+      expect(result.units()).toBe("°F");
     });
 
   });
