@@ -1,3 +1,8 @@
+1.7.4-0 / 2019-2-21
+------------------
+
+* Add degree symbol temperatures to aliases for absolute temperatures
+
 1.7.3 / 2018-12-15
 ------------------
 
